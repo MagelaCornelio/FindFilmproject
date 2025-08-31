@@ -1,0 +1,56 @@
+/* src/components/Movies.module.css */
+
+.moviesList {
+    list-style: none;
+    /* Quitamos las viñetas predeterminadas */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+}
+
+.movieItem {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.movieItem:hover {
+    transform: translateY(-5px);
+}
+
+.movieItem h3 {
+    font-size: 1.2rem;
+    margin: 15px 10px 5px;
+    color: #61dafb;
+}
+
+.movieItem p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0 10px 10px;
+}
+
+.movieItem img {
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-bottom: 1px solid #61dafb;
+}
+
+.noMoviesMessage {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 50px;
+}

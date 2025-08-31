@@ -1,0 +1,101 @@
+/* src/components/MovieDetail.module.css */
+
+.movieDetailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 2rem auto;
+    gap: 1.5rem;
+}
+
+.backButton {
+    background-color: #61dafb;
+    color: #282c34;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+    align-self: flex-start;
+    /* Alinea el botón a la izquierda */
+    margin-left: 10px;
+    /* Pequeño margen */
+}
+
+.backButton:hover {
+    background-color: #21a1f1;
+}
+
+.detailCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.poster {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info {
+    text-align: left;
+    width: 100%;
+}
+
+.info h2 {
+    color: #61dafb;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.info p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.info strong {
+    color: #ccc;
+}
+
+.plot {
+    font-style: italic;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.loadingMessage,
+.errorMessage {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .detailCard {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info {
+        flex: 1;
+    }
+
+    .backButton {
+        margin-left: 0;
+        /* Centramos el contenedor principal */
+    }
+}

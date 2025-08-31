@@ -1,0 +1,73 @@
+/* src/components/Search.module.css */
+
+.searchForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    position: relative;
+    /* Para posicionar el mensaje de error */
+}
+
+.searchForm input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #61dafb;
+    /* Azul React */
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+.searchForm input.inputError {
+    /* Nuevo estilo para el input con error */
+    border-color: #ff6b6b;
+    /* Rojo para indicar error */
+}
+
+.searchForm button {
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+    /* Evita que el texto del botón se rompa */
+}
+
+.searchForm button:hover {
+    background-color: #21a1f1;
+}
+
+.clearButton {
+    /* Nuevo estilo para el botón de limpiar */
+    background-color: #ff6b6b !important;
+    /* Rojo */
+    color: white !important;
+    padding: 10px 15px !important;
+    font-weight: bold;
+}
+
+.clearButton:hover {
+    background-color: #e63946 !important;
+}
+
+.errorMessage {
+    /* Nuevo estilo para el mensaje de error */
+    color: #ff6b6b;
+    font-size: 0.9em;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    text-align: left;
+    margin-top: 5px;
+    position: absolute;
+    /* Posicionamiento relativo al formulario */
+    bottom: -25px;
+    /* Ajusta esto según necesites para que quede debajo del input */
+    left: 0;
+}
